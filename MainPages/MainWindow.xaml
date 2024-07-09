@@ -69,11 +69,12 @@
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
                             <TextBlock
-                                FontFamily="Bahnschrift"
+                                FontWeight="DemiBold"
+                              
                                 HorizontalAlignment="Left"
                                 VerticalAlignment="Center"
                                 Foreground="#FFCD6607"
-                                FontSize="11"
+                                FontSize="12"
                                 Text="PROJECT AUTOMAIT" />
                             <Grid
                                 MouseDown="closeBtn_MouseDown"
@@ -96,7 +97,7 @@
                                     FontWeight="DemiBold"
                                     VerticalAlignment="Center"
                                     Foreground="#FF929191"
-                                    FontFamily="Bahnschrift"
+                                
                                     Text="CLOSE" />
                                 <mi:MaterialIcon
                                     Grid.Column="1"

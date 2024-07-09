@@ -32,14 +32,12 @@
             <TextBlock
                 Text="Aimbot"
                 VerticalAlignment="Center"
-                FontFamily="Bahnschrift"
                 FontSize="15" />
             <TextBlock
                 Grid.Row="1"
                 Text="It's a Hack. wooow"
                 Foreground="#FF929191"
                 VerticalAlignment="Center"
-                FontFamily="Bahnschrift"
                 FontSize="12" />
             <mi:MaterialIcon
                 Grid.Column="1"
@@ -77,7 +75,6 @@
                         <TextBlock
                             Text="General"
                             VerticalAlignment="Center"
-                            FontFamily="Bahnschrift"
                             Background="Transparent" />
                     </Border>
                     <Grid
@@ -118,7 +115,6 @@
                                 Text="Enable"
                                 VerticalAlignment="Center"
                                 FontSize="13"
-                                FontFamily="Bahnschrift"
                                 Foreground="#FF929191"
                                 Background="Transparent" />
                         </Grid>
@@ -138,7 +134,7 @@
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Left"
                                 FontSize="13"
-                                FontFamily="Bahnschrift" />
+                                />
                             <TextBlock
                                 x:Name="txtFOV"
                                 Grid.Column="1"
@@ -146,7 +142,6 @@
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Center"
                                 FontSize="13"
-                                FontFamily="Bahnschrift"
                                 Foreground="#FF929191" />
                             <Slider
                                 ValueChanged="FOV_ValueChanged"
@@ -180,7 +175,6 @@
                                 Text="Auto wall"
                                 VerticalAlignment="Center"
                                 FontSize="13"
-                                FontFamily="Bahnschrift"
                                 Foreground="#FF929191" />
                         </Grid>
                         <Grid
@@ -205,7 +199,6 @@
                                 Text="Rainbow | Rect color"
                                 VerticalAlignment="Center"
                                 FontSize="13"
-                                FontFamily="Bahnschrift"
                                 Foreground="#FF929191" />
                         </Grid>
                         <Grid
@@ -230,7 +223,6 @@
                                 Text="Auto fire"
                                 VerticalAlignment="Center"
                                 FontSize="13"
-                                FontFamily="Bahnschrift"
                                 Foreground="#FF929191" />
                         </Grid>
                         <Grid
@@ -256,7 +248,6 @@
                                 Text="Silent aim"
                                 VerticalAlignment="Center"
                                 FontSize="13"
-                                FontFamily="Bahnschrift"
                                 Foreground="#FF929191" />
                         </Grid>
                         <Grid
@@ -283,7 +274,6 @@
                                     Text="Body Parts"
                                     VerticalAlignment="Center"
                                     FontSize="13"
-                                    FontFamily="Bahnschrift"
                                     Foreground="#FF929191"
                                     Background="Transparent" />
                                 <Rectangle
@@ -351,7 +341,6 @@
                                     Text="Game Mode"
                                     VerticalAlignment="Center"
                                     FontSize="13"
-                                    FontFamily="Bahnschrift"
                                     Foreground="#FF929191"
                                     Background="Transparent" />
                                 <Rectangle
@@ -409,7 +398,6 @@
                         <TextBlock
                             Text="Information"
                             VerticalAlignment="Center"
-                            FontFamily="Bahnschrift"
                             Background="Transparent" />
                     </Border>
                 </Grid>

@@ -28,5 +28,11 @@ namespace Project_Automait.Classes
             {2, Key.D3},
             {3, Key.D4},
         };
+
+        
+
+       
+        
+
     }
 }

@@ -738,11 +738,9 @@
                 <TextBlock
                     x:Name="txtSymb"
                     FontWeight="DemiBold"
-                    FontFamily="Bahnschrift"
                     Text="SYMBIOTIC.LINK"
                     VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                     />
+                    HorizontalAlignment="Center" />
             </Border>
             <Grid
                 DataContext="0"
@@ -769,7 +767,6 @@
                 <TextBlock
                     FontWeight="DemiBold"
                     x:Name="txtAimbot"
-                    FontFamily="Bahnschrift"
                     Grid.Column="1"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
@@ -801,7 +798,6 @@
                 <TextBlock
                     FontWeight="DemiBold"
                     x:Name="txtVisual"
-                    FontFamily="Bahnschrift"
                     Grid.Column="1"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
@@ -833,7 +829,6 @@
                 <TextBlock
                     FontWeight="DemiBold"
                     x:Name="txtMisc"
-                    FontFamily="Bahnschrift"
                     Grid.Column="1"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
@@ -865,7 +860,6 @@
                 <TextBlock
                     FontWeight="DemiBold"
                     x:Name="txtSkins"
-                    FontFamily="Bahnschrift"
                     Grid.Column="1"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
@@ -897,7 +891,6 @@
                 <TextBlock
                     FontWeight="DemiBold"
                     x:Name="txtSettings"
-                    FontFamily="Bahnschrift"
                     Grid.Column="1"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
@@ -922,7 +915,6 @@
                     Height="1"
                     Width="10" />
                 <TextBlock
-                    FontFamily="Bahnschrift"
                     Grid.Column="1"
                     FontSize="11"
                     VerticalAlignment="Center"
@@ -971,7 +963,6 @@
                     Margin="5 0"
                     Grid.Row="0"
                     Grid.Column="1"
-                    
                     Text="ShiiikK" />
                 <Grid
                     Margin="5 0"

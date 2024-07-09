@@ -738,7 +738,6 @@
                 <TextBlock
                     x:Name="txtSymb"
                     FontWeight="DemiBold"
-                    FontFamily="Bahnschrift"
                     Text="SYMBIOTIC.LINK"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
@@ -769,7 +768,6 @@
                 <TextBlock
                     FontWeight="DemiBold"
                     x:Name="txtLogin"
-                    FontFamily="Bahnschrift"
                     Grid.Column="1"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
@@ -801,7 +799,6 @@
                 <TextBlock
                     FontWeight="DemiBold"
                     x:Name="txtRegister"
-                    FontFamily="Bahnschrift"
                     Grid.Column="1"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
@@ -833,7 +830,6 @@
                 <TextBlock
                     FontWeight="DemiBold"
                     x:Name="txtPayment"
-                    FontFamily="Bahnschrift"
                     Grid.Column="1"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
@@ -865,7 +861,6 @@
                 <TextBlock
                     FontWeight="DemiBold"
                     x:Name="txtDiscord"
-                    FontFamily="Bahnschrift"
                     Grid.Column="1"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
@@ -897,7 +892,6 @@
                 <TextBlock
                     FontWeight="DemiBold"
                     x:Name="txtSettings"
-                    FontFamily="Bahnschrift"
                     Grid.Column="1"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
@@ -922,7 +916,6 @@
                     Height="1"
                     Width="10" />
                 <TextBlock
-                    FontFamily="Bahnschrift"
                     Grid.Column="1"
                     FontSize="11"
                     VerticalAlignment="Center"

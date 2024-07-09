@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
+using Project_Automait.Classes;
 
 
 namespace Project_Automait
@@ -24,6 +25,14 @@ namespace Project_Automait
             mainWindow.isLogged = true;
             mainWindow.txtClose.Text = "LOGOUT";
             mainWindow.iconClose.Kind = Material.Icons.MaterialIconKind.LogoutVariant;
+            {
+                NotificationWindow notification = new("Logged In", "Successfully logged in.", NotificationManager.NotificationType.Success);
+                notification.Show();
+            }
+            {
+                MiniWindow miniWindow = new();
+                miniWindow.Show();
+            }
 
         }
 

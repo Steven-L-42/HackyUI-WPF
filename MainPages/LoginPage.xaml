@@ -31,14 +31,12 @@
             </Grid.ColumnDefinitions>
             <TextBlock
                 VerticalAlignment="Center"
-                FontFamily="Bahnschrift"
                 FontSize="15"
                 Text="LOGIN" />
             <TextBlock
                 Grid.Row="1"
                 Foreground="#FF929191"
                 VerticalAlignment="Center"
-                FontFamily="Bahnschrift"
                 FontSize="12" />
             <mi:MaterialIcon
                 Grid.Column="1"
@@ -73,7 +71,6 @@
                         <TextBlock
                             Text="Welcome back..."
                             VerticalAlignment="Center"
-                            FontFamily="Bahnschrift"
                             Background="Transparent" />
                     </Border>
                     <Grid
@@ -138,7 +135,6 @@
                                 Width="20"
                                 Height="20" />
                             <TextBlock
-                                FontFamily="Bahnschrift"
                                 Text="Remember me"
                                 VerticalAlignment="Center" />
                         </StackPanel>
@@ -159,7 +155,6 @@
                                 Foreground="#FF888787" />
                             <TextBlock
                                 Foreground="#FF888787"
-                                FontFamily="Bahnschrift"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center"
                                 FontSize="12"
@@ -180,7 +175,6 @@
                             <TextBlock
                                 Grid.Row="5"
                                 Foreground="#FF06D286"
-                                FontFamily="Bahnschrift"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center"
                                 FontSize="12"
@@ -201,7 +195,6 @@
                             <TextBlock
                                 Grid.Row="5"
                                 Foreground="#FF0686D2"
-                                FontFamily="Bahnschrift"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center"
                                 FontSize="12"

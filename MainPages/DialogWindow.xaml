@@ -1,0 +1,121 @@
+﻿<Window
+    x:Class="Project_Automait.DialogWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mi="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+    xmlns:local="clr-namespace:Project_Automait.Classes"
+    mc:Ignorable="d"
+    ResizeMode="NoResize"
+    WindowStyle="None"
+    Title="DialogWindow"
+    Background="Transparent"
+    AllowsTransparency="True"
+    Height="150"
+    Width="300"
+    WindowStartupLocation="CenterScreen">
+    <Border
+        BorderThickness="1"
+        BorderBrush="#FF404040"
+        Margin="5"
+        CornerRadius="10">
+        <Border.Background>
+            <ImageBrush
+                ImageSource="/resource/bg.png" />
+        </Border.Background>
+        <Border
+            CornerRadius="10"
+            Background="#CC181818"
+            Grid.Column="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="30" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Border
+                    x:Name="headBar"
+                    MouseDown="headBar_MouseDown"
+                    MouseUp="headBar_MouseUp"
+                    MouseMove="headBar_MouseMove"
+                    Padding="10 0"
+                    BorderThickness="0 0 0 1"
+                    BorderBrush="#7F404040"
+                    CornerRadius="10 10 0 0"
+                    Background="#99141414">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock
+                            FontWeight="DemiBold"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Foreground="#FFCD6607"
+                            FontSize="12"
+                            Text="ARE YOUR SURE?" />
+                        <Grid
+                            MouseUp="closeBtn_MouseUp"
+                            MouseDown="closeBtn_MouseDown"
+                            MouseEnter="closeBtn_MouseEnter"
+                            MouseLeave="closeBtn_MouseLeave"
+                            Cursor="Hand"
+                            Background="Transparent"
+                            HorizontalAlignment="Right"
+                            Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition
+                                    Width="25" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock
+                                Margin="0 1 0 0"
+                                x:Name="txtClose"
+                                FontSize="11"
+                                FontWeight="DemiBold"
+                                VerticalAlignment="Center"
+                                Foreground="#FF929191"
+                                Text="CANCEL" />
+                            <mi:MaterialIcon
+                                Grid.Column="1"
+                                x:Name="iconClose"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                Foreground="#FF929191"
+                                Height="17"
+                                Kind="CloseBox" />
+                        </Grid>
+                    </Grid>
+                </Border>
+                <Border
+                    Grid.Row="1"
+                    CornerRadius="0 10 10 10"
+                    Background="#4C141414">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock
+                            FontSize="14"
+                            TextAlignment="Center"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"><Run
+                                Text="Do you really want to quit the program? " /><LineBreak /><Run
+                                Text="All services will be stopped." /></TextBlock>
+                        <local:Button
+                            FontWeight="DemiBold"
+                            MouseDown="exitBtn_MouseUp"
+                            Grid.Row="1"
+                            Width="100"
+                            Height="30"
+                            FontSize="14"
+                            Text="EXIT" />
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Border>
+</Window>

@@ -31,14 +31,12 @@
             </Grid.ColumnDefinitions>
             <TextBlock
                 VerticalAlignment="Center"
-                FontFamily="Bahnschrift"
                 FontSize="15"
                 Text="PAYMENT" />
             <TextBlock
                 Grid.Row="1"
                 Foreground="#FF929191"
                 VerticalAlignment="Center"
-                FontFamily="Bahnschrift"
                 FontSize="12" />
             <mi:MaterialIcon
                 Grid.Column="1"
@@ -73,7 +71,6 @@
                         <TextBlock
                             Text="Happy to see your bitcoins soon..."
                             VerticalAlignment="Center"
-                            FontFamily="Bahnschrift"
                             Background="Transparent" />
                     </Border>
                     <Grid
@@ -163,7 +160,6 @@
                             Grid.Row="5"
                             Margin="0 0 0 10"
                             Foreground="#FF888787"
-                            FontFamily="Bahnschrift"
                             FontSize="12"
                             Text="0.000479 BTC = 25 EUR" />
                         <StackPanel
@@ -181,7 +177,6 @@
                             <TextBlock
                                 Grid.Row="5"
                                 Foreground="#FF06D286"
-                                FontFamily="Bahnschrift"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center"
                                 FontSize="12"
@@ -203,7 +198,6 @@
                             <TextBlock
                                 Grid.Row="5"
                                 Foreground="#FF0686D2"
-                                FontFamily="Bahnschrift"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center"
                                 FontSize="12"

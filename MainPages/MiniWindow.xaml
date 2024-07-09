@@ -38,15 +38,12 @@
                 CornerRadius="0 0 0 10"
                 Grid.Column="0">
                 <TextBlock
-               
                     x:Name="txtTimer"
                     Text="23:59:59"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
                     FontWeight="DemiBold"
-                    FontSize="14"
-                    FontFamily="Bahnschrift"
-                     />
+                    FontSize="14" />
             </Border>
             <Border
                 Grid.Column="1"
@@ -67,7 +64,6 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock
                         Grid.Column="0"
-                        FontFamily="Bahnschrift"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
                         Foreground="#99CD6607"
@@ -79,7 +75,6 @@
                         MouseLeave="miniBarAction_MouseLeave"
                         MouseDown="miniBarAction_MouseDown"
                         Grid.Column="1"
-                        FontFamily="Bahnschrift"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Foreground="#FF929191"
@@ -91,7 +86,7 @@
                         MouseLeave="miniBarAction_MouseLeave"
                         MouseDown="miniBarAction_MouseDown"
                         Grid.Column="2"
-                        FontFamily="Bahnschrift"
+                       
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Foreground="#FF929191"
@@ -103,7 +98,6 @@
                         MouseLeave="miniBarAction_MouseLeave"
                         MouseDown="miniBarAction_MouseDown"
                         Grid.Column="9"
-                        FontFamily="Bahnschrift"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Foreground="#FF929191"

@@ -1,29 +1,20 @@
 ﻿using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
-using Project_Automait.Classes;
 
 namespace Project_Automait
 {
-    public partial class MainWindow : Window
+
+    public partial class DialogWindow : Window
     {
-        DialogWindow? dialogWindow;
         private bool isWindowMove = false;
         private bool isClosing = false;
-        public bool isLogged = false;
         Point startPos;
 
-        public MainWindow()
+        public DialogWindow()
         {
             InitializeComponent();
             this.Topmost = true;
-           
-            {
-                NotificationWindow notification = new("Welcome", "Welcome to Project-Automait", NotificationManager.NotificationType.Success);
-                notification.Show();
-            }
-
-
         }
 
         private void closeBtn_MouseDown(object sender, MouseButtonEventArgs e)
@@ -33,27 +24,11 @@ namespace Project_Automait
 
         private void closeBtn_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            dialogWindow?.Close();
-
-            if (isLogged)
-            {
-
-                navFrame.Source = new Uri("pack://application:,,,/Project_Automait;component/NavPages/LoginNavPage.xaml", UriKind.Absolute);
-                mainFrame.Source = new Uri("pack://application:,,,/Project_Automait;component/MainPages/LoginPage.xaml", UriKind.Absolute);
-
-                isLogged = false;
-                isClosing = false;
-                txtClose.Text = "CLOSE";
-                iconClose.Kind = Material.Icons.MaterialIconKind.CloseBox;
-                {
-                    NotificationWindow notification = new("Logged Out", "You're now logged out.", NotificationManager.NotificationType.Warning);
-                    notification.Show();
-                }
-                return;
-            }
-            dialogWindow = new();
-            dialogWindow.Show();
-
+            this.Close();
+        }
+        private void exitBtn_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
 
         private void closeBtn_MouseEnter(object sender, MouseEventArgs e)
@@ -70,7 +45,6 @@ namespace Project_Automait
 
         private void headBar_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
             if (isClosing)
                 return;
 
