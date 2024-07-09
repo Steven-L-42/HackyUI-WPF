@@ -44,8 +44,7 @@ namespace Project_Automait
                 iconClose.Kind = Material.Icons.MaterialIconKind.CloseBox;
                 return;
             }
-
-            this.Close();
+            Application.Current.Shutdown();
         }
 
         private void closeBtn_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
