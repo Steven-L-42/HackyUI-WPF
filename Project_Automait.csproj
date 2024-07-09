@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Project_Automait</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <UseWPF>true</UseWPF>
+
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="resource\bg.png" />
+    <None Remove="resource\logo.png" />
+    <None Remove="resource\wallet.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Material.Icons.WPF" Version="2.1.10" />
+    <PackageReference Include="MouseKeyHook" Version="5.7.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resource\bg.png" />
+    <Resource Include="resource\logo.png" />
+    <Resource Include="resource\wallet.png" />
+  </ItemGroup>
+
+</Project>
