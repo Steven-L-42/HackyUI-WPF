@@ -1,8 +1,6 @@
 ﻿using System.Windows;
-using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
-using Gma.System.MouseKeyHook;
 
 namespace Project_Automait
 {
@@ -13,19 +11,13 @@ namespace Project_Automait
         private bool isClosing = false;
         public bool isLogged = false;
         Point startPos;
-        private IKeyboardMouseEvents? m_GlobalHook;
 
         public MainWindow()
         {
             InitializeComponent();
-            Subscribe();
 
-
-            //MiniWindow miniWindow = new();
-
-            //miniWindow.Show();
-
-
+            MiniWindow miniWindow = new();
+            miniWindow.Show();
         }
         Dictionary<int, string> test = new()
         {
@@ -34,43 +26,13 @@ namespace Project_Automait
                 {2, "Heiko" }
         };
 
-        public void Subscribe()
-        {
-            m_GlobalHook = Hook.GlobalEvents();
-
-            var combinations = new Dictionary<Combination, Action>
-            {
-                { Combination.TriggeredBy(Keys.F9), () => GlobalHookKeyFPress(Keys.F9) },
-                { Combination.TriggeredBy(Keys.F10), () => GlobalHookKeyFPress(Keys.F10) },
-                { Combination.TriggeredBy(Keys.F11), () => GlobalHookKeyFPress(Keys.F11) }
-            };
-
-            m_GlobalHook.OnCombination(combinations);
-
-        }
-
-
-
-
-        private void GlobalHookKeyFPress(Keys key)
-        {
-
-
-
-            //Debug.WriteLine(key);
-        }
-        //public void Unsubscribe()
-        //{
-
-        //    m_GlobalHook.KeyPress -= GlobalHookKeyPress;
-
-        //    m_GlobalHook.Dispose();
-        //}
-
-
         private void closeBtn_MouseDown(object sender, MouseButtonEventArgs e)
         {
             isClosing = true;
+        }
+
+        private void closeBtn_MouseUp(object sender, MouseButtonEventArgs e)
+        {
             if (isLogged)
             {
                 navFrame.Source = new Uri("pack://application:,,,/Project_Automait;component/NavPages/LoginNavPage.xaml", UriKind.Absolute);
@@ -97,6 +59,7 @@ namespace Project_Automait
             SolidColorBrush brush = new(Color.FromArgb(0xFF, 0x88, 0x87, 0x87));
             txtClose.Foreground = iconClose.Foreground = brush;
         }
+
         private void headBar_MouseDown(object sender, MouseButtonEventArgs e)
         {
 
@@ -108,12 +71,15 @@ namespace Project_Automait
             startPos = PointToScreen(startPos);
             startPos.X -= this.Left;
             startPos.Y -= this.Top;
+            this.Opacity = 0.4;
             Mouse.Capture((UIElement)sender);
         }
 
         private void headBar_MouseUp(object sender, MouseButtonEventArgs e)
         {
             isWindowMove = false;
+            isClosing = false;
+            this.Opacity = 1;
             Mouse.Capture(null);
         }
 
@@ -125,8 +91,6 @@ namespace Project_Automait
             currPos = PointToScreen(currPos);
             this.Left = currPos.X - startPos.X;
             this.Top = currPos.Y - startPos.Y;
-
         }
-
     }
 }
