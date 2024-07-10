@@ -10,12 +10,20 @@
     <UseWPF>true</UseWPF>
 
     <ApplicationManifest>app.manifest</ApplicationManifest>
+
+    <ApplicationIcon>logoWithout.ico</ApplicationIcon>
+
+    <Product>$(AssemblyName)</Product>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="resource\bg.png" />
     <None Remove="resource\logo.png" />
     <None Remove="resource\wallet.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="logoWithout.ico" />
   </ItemGroup>
 
   <ItemGroup>

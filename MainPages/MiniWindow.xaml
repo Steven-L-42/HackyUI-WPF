@@ -11,7 +11,9 @@
     WindowStyle="None"
     Title="MiniWindow"
     Background="Transparent"
+    ShowInTaskbar="False"
     AllowsTransparency="True"
+    Topmost="True"
     Height="36"
     Width="686">
     <Border

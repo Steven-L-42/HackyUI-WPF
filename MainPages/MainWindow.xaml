@@ -14,6 +14,7 @@
     AllowsTransparency="True"
     Height="518"
     Width="686"
+    Topmost="True"
     WindowStartupLocation="CenterScreen">
     <Border
         BorderThickness="1"
@@ -55,9 +56,9 @@
                     </Grid.RowDefinitions>
                     <Border
                         x:Name="headBar"
-                        MouseDown="headBar_MouseDown"
-                        MouseUp="headBar_MouseUp"
-                        MouseMove="headBar_MouseMove"
+                        MouseDown="HeadBar_MouseDown"
+                        MouseUp="HeadBar_MouseUp"
+                        MouseMove="HeadBar_MouseMove"
                         Padding="10 0"
                         BorderThickness="0 0 0 1"
                         BorderBrush="#7F404040"
@@ -69,18 +70,19 @@
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
                             <TextBlock
+                                x:Name="txtTitle"
                                 FontWeight="DemiBold"
                               
                                 HorizontalAlignment="Left"
                                 VerticalAlignment="Center"
-                                Foreground="#FFCD6607"
+                                Foreground="#99CD6607"
                                 FontSize="12"
                                 Text="PROJECT AUTOMAIT" />
                             <Grid
-                                MouseDown="closeBtn_MouseDown"
-                                MouseUp="closeBtn_MouseUp"
-                                MouseEnter="closeBtn_MouseEnter"
-                                MouseLeave="closeBtn_MouseLeave"
+                                MouseDown="CloseBtn_MouseDown"
+                                MouseUp="CloseBtn_MouseUp"
+                                MouseEnter="CloseBtn_MouseEnter"
+                                MouseLeave="CloseBtn_MouseLeave"
                                 Cursor="Hand"
                                 Background="Transparent"
                                 HorizontalAlignment="Right"

@@ -5,22 +5,24 @@ namespace Project_Automait.Classes
 {
     public static class NotificationManager
     {
-        private static List<NotificationWindow> notifications = new();
+        private static readonly List<NotificationWindow> notifications = [];
 
         public enum NotificationType
         {
             Success,
             Info,
             Warning,
-            Error
+            Error,
+            Neutral
         }
 
-        public static readonly Dictionary<NotificationType, SolidColorBrush> notificationColors = new Dictionary<NotificationType, SolidColorBrush>
+        public static readonly Dictionary<NotificationType, SolidColorBrush> notificationColors = new()
         {
             { NotificationType.Success, new SolidColorBrush(Color.FromArgb(0xFF, 0x06, 0xD2 , 0x82))},
             { NotificationType.Info, new SolidColorBrush(Color.FromArgb(0xFF, 0x06, 0x83 , 0xD2))},
             { NotificationType.Warning, new SolidColorBrush(Color.FromArgb(0xFF, 0xD2, 0x76 , 0x06))},
             { NotificationType.Error, new SolidColorBrush(Color.FromArgb(0xFF, 0xD2, 0x06 , 0x06))},
+            { NotificationType.Neutral, new SolidColorBrush(Color.FromArgb(0xFF, 0x40, 0x40 , 0x40))},
         };
 
 

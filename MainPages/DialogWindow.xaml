@@ -12,26 +12,27 @@
     Title="DialogWindow"
     Background="Transparent"
     AllowsTransparency="True"
-    Height="150"
+    Height="125"
     Width="300"
+    Topmost="True"
     WindowStartupLocation="CenterScreen">
     <Border
         BorderThickness="1"
         BorderBrush="#FF404040"
         Margin="5"
-        CornerRadius="10">
+        CornerRadius="5">
         <Border.Background>
             <ImageBrush
                 ImageSource="/resource/bg.png" />
         </Border.Background>
         <Border
-            CornerRadius="10"
+            CornerRadius="5"
             Background="#CC181818"
             Grid.Column="1">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition
-                        Height="30" />
+                        Height="25" />
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <Border
@@ -42,7 +43,7 @@
                     Padding="10 0"
                     BorderThickness="0 0 0 1"
                     BorderBrush="#7F404040"
-                    CornerRadius="10 10 0 0"
+                    CornerRadius="5 5 0 0"
                     Background="#99141414">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -91,7 +92,7 @@
                 </Border>
                 <Border
                     Grid.Row="1"
-                    CornerRadius="0 10 10 10"
+                    CornerRadius="0 5 5 5"
                     Background="#4C141414">
                     <Grid>
                         <Grid.RowDefinitions>
@@ -110,7 +111,7 @@
                             MouseDown="exitBtn_MouseUp"
                             Grid.Row="1"
                             Width="100"
-                            Height="30"
+                            Height="25"
                             FontSize="14"
                             Text="EXIT" />
                     </Grid>

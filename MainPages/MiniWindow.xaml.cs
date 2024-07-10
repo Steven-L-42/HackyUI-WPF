@@ -21,7 +21,6 @@ namespace Project_Automait
             this.WindowStartupLocation = WindowStartupLocation.Manual;
             this.Left = (SystemParameters.PrimaryScreenWidth / 2) - (this.Width / 2);
             this.Top = 0;
-            this.Topmost = true;
             StartTimer();
         }
 

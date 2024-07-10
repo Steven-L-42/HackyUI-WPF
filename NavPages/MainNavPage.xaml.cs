@@ -66,9 +66,8 @@ namespace Project_Automait
                         fullUri = "pack://application:,,,/Project_Automait;component/MainPages/VisualsPage.xaml";
                         break;
                     case 2:
-                        return;
-                        //fullUri = "pack://application:,,,/Project_Automait;component/MainPages/MiscPage.xaml";
-                        //break;
+                        fullUri = "pack://application:,,,/Project_Automait;component/MainPages/MiscsPage.xaml";
+                        break;
                     case 3:
                         return;
                         //fullUri = "pack://application:,,,/Project_Automait;component/MainPages/SkinsPage.xaml";

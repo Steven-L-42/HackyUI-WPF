@@ -26,7 +26,7 @@ namespace Project_Automait
             mainWindow.txtClose.Text = "LOGOUT";
             mainWindow.iconClose.Kind = Material.Icons.MaterialIconKind.LogoutVariant;
             {
-                NotificationWindow notification = new("Logged In", "Successfully logged in.", NotificationManager.NotificationType.Success);
+                NotificationWindow notification = new("Logged In", "Successfully logged in.", NotificationManager.NotificationType.Info);
                 notification.Show();
             }
             {

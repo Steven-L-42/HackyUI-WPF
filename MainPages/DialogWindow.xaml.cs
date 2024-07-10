@@ -14,7 +14,6 @@ namespace Project_Automait
         public DialogWindow()
         {
             InitializeComponent();
-            this.Topmost = true;
         }
 
         private void closeBtn_MouseDown(object sender, MouseButtonEventArgs e)

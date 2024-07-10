@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Text;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using Project_Automait.Classes;
@@ -16,22 +17,40 @@ namespace Project_Automait
         public MainWindow()
         {
             InitializeComponent();
-            this.Topmost = true;
-           
+            this.Title = RandomTitleGenerator();
+            txtTitle.Text = this.Title;
+            
             {
-                NotificationWindow notification = new("Welcome", "Welcome to Project-Automait", NotificationManager.NotificationType.Success);
+                NotificationWindow notification = new("Welcome to HackUI",
+                    "This tool provides a sleek and intuitive interface for all your hacking needs.\nHappy hacking!",
+                   lifetime: 15);
                 notification.Show();
             }
-
-
         }
 
-        private void closeBtn_MouseDown(object sender, MouseButtonEventArgs e)
+        private static string RandomTitleGenerator()
+        {
+            char[] chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+            int minChars = Random.Shared.Next(10, 20);
+
+            StringBuilder sb = new();
+            for (int i = 0; i < minChars; i++)
+            {
+                if (Random.Shared.Next(0, 101) % 2 == 0)
+                    sb.Append(chars[Random.Shared.Next(0, chars.Length)].ToString().ToUpper());
+                else
+                    sb.Append(chars[Random.Shared.Next(0, chars.Length)]);
+            }
+
+            return sb.ToString();
+        }
+
+        private void CloseBtn_MouseDown(object sender, MouseButtonEventArgs e)
         {
             isClosing = true;
         }
 
-        private void closeBtn_MouseUp(object sender, MouseButtonEventArgs e)
+        private void CloseBtn_MouseUp(object sender, MouseButtonEventArgs e)
         {
             dialogWindow?.Close();
 
@@ -53,22 +72,26 @@ namespace Project_Automait
             }
             dialogWindow = new();
             dialogWindow.Show();
+            {
+                NotificationWindow notification = new("Time to say good bye", "Are you willing to leave us?", NotificationManager.NotificationType.Error);
+                notification.Show();
+            }
 
         }
 
-        private void closeBtn_MouseEnter(object sender, MouseEventArgs e)
+        private void CloseBtn_MouseEnter(object sender, MouseEventArgs e)
         {
             SolidColorBrush brush = new(Color.FromArgb(0xFF, 0xFF, 0x7A, 0x00));
             txtClose.Foreground = iconClose.Foreground = brush;
         }
 
-        private void closeBtn_MouseLeave(object sender, MouseEventArgs e)
+        private void CloseBtn_MouseLeave(object sender, MouseEventArgs e)
         {
             SolidColorBrush brush = new(Color.FromArgb(0xFF, 0x88, 0x87, 0x87));
             txtClose.Foreground = iconClose.Foreground = brush;
         }
 
-        private void headBar_MouseDown(object sender, MouseButtonEventArgs e)
+        private void HeadBar_MouseDown(object sender, MouseButtonEventArgs e)
         {
 
             if (isClosing)
@@ -83,7 +106,7 @@ namespace Project_Automait
             Mouse.Capture((UIElement)sender);
         }
 
-        private void headBar_MouseUp(object sender, MouseButtonEventArgs e)
+        private void HeadBar_MouseUp(object sender, MouseButtonEventArgs e)
         {
             isWindowMove = false;
             isClosing = false;
@@ -91,7 +114,7 @@ namespace Project_Automait
             Mouse.Capture(null);
         }
 
-        private void headBar_MouseMove(object sender, MouseEventArgs e)
+        private void HeadBar_MouseMove(object sender, MouseEventArgs e)
         {
             if (!isWindowMove)
                 return;
