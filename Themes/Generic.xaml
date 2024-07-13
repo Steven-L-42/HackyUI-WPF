@@ -168,7 +168,7 @@
                             x:Key="BooleanToVisibilityConverter" />
                     </ControlTemplate.Resources>
                     <Border
-                        
+                        Cursor="IBeam"
                         x:Name="border"
                         Padding="{TemplateBinding Padding}"
                         Background="{TemplateBinding Background}"
@@ -177,25 +177,38 @@
                         BorderBrush="{TemplateBinding BorderBrush}">
                         <Grid>
                             <TextBlock
-                                Panel.ZIndex="1"
+                                Panel.ZIndex="2"
                                 IsHitTestVisible="False"
                                 Visibility="{Binding IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}, RelativeSource={RelativeSource TemplatedParent}}"
                                 x:Name="textBlock"
                                 Foreground="{TemplateBinding PlaceholderForeground}"
                                 FontSize="{TemplateBinding FontSize}"
                                 Text="{TemplateBinding Placeholder}"
-                               
                                 HorizontalAlignment="Stretch"
                                 VerticalAlignment="Center"
                                 Background="Transparent" />
                             <ScrollViewer
                                 Margin="0"
                                 Padding="0"
+                                Visibility="{Binding ShowText, Converter={StaticResource BooleanToVisibilityConverter}, RelativeSource={RelativeSource TemplatedParent}}"
                                 HorizontalAlignment="Stretch"
                                 FontSize="{TemplateBinding FontSize}"
                                 VerticalAlignment="Center"
                                 Background="Transparent"
                                 x:Name="PART_ContentHost" />
+                            <TextBox
+                                BorderThickness="0"
+                                Panel.ZIndex="1"
+                                Padding="0 7 0 0"
+                                IsHitTestVisible="False"
+                                Visibility="{Binding IsPassword, Converter={StaticResource BooleanToVisibilityConverter}, RelativeSource={RelativeSource TemplatedParent}}"
+                                x:Name="passwordBlock"
+                                Foreground="{TemplateBinding Foreground}"
+                                FontSize="{TemplateBinding FontSize}"
+                                Text="{TemplateBinding Password}"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Center"
+                                Background="Transparent" />
                         </Grid>
                     </Border>
                 </ControlTemplate>

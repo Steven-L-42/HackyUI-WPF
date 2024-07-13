@@ -103,6 +103,7 @@
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center" />
                             <local:TextBox
+                                x:Name="txtUsername"
                                 Width="300"
                                 Height="30"
                                 Placeholder="Username" />
@@ -118,9 +119,28 @@
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center" />
                             <local:TextBox
+                                x:Name="txtPassword"
+                                IsPassword="True"
+                                ShowText="False"
                                 Width="300"
                                 Height="30"
                                 Placeholder="Password" />
+                            <Border
+                                MouseEnter="IconPassword_MouseEnter"
+                                MouseLeave="IconPassword_MouseLeave"
+                                Cursor="Hand"
+                                Margin="-30 0 0 0"
+                                Height="30"
+                                Width="30">
+                                <mi:MaterialIcon
+                                    x:Name="iconPassword"
+                                    Background="Transparent"
+                                    Kind="EyeLock"
+                                    Width="20"
+                                    Height="20"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center" />
+                            </Border>
                         </StackPanel>
                         <StackPanel
                             Cursor="Hand"

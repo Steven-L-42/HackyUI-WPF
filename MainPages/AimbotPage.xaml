@@ -5,6 +5,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Project_Automait.Classes"
+    xmlns:ext="http://schemas.xceed.com/wpf/xaml/toolkit"
     mc:Ignorable="d"
     xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2"
     xmlns:mi="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
@@ -133,8 +134,7 @@
                                 Text="FOV"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Left"
-                                FontSize="13"
-                                />
+                                FontSize="13" />
                             <TextBlock
                                 x:Name="txtFOV"
                                 Grid.Column="1"
@@ -144,6 +144,7 @@
                                 FontSize="13"
                                 Foreground="#FF929191" />
                             <Slider
+                                Style="{DynamicResource SliderStyle1}"
                                 ValueChanged="FOV_ValueChanged"
                                 Value="90"
                                 Minimum="1"
@@ -178,13 +179,16 @@
                                 Foreground="#FF929191" />
                         </Grid>
                         <Grid
-                            MouseDown="CheckBox_MouseDown"
                             Cursor="Hand"
                             Background="Transparent"
                             Grid.Row="3">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition
                                     Width="25" />
+                                <ColumnDefinition
+                                    Width="5" />
+                                <ColumnDefinition
+                                    Width="auto" />
                                 <ColumnDefinition
                                     Width="5" />
                                 <ColumnDefinition />
@@ -195,11 +199,26 @@
                                 Width="20"
                                 Height="20" />
                             <TextBlock
+                                MouseDown="CheckBox_MouseDown"
                                 Grid.Column="2"
                                 Text="Rainbow | Rect color"
                                 VerticalAlignment="Center"
                                 FontSize="13"
                                 Foreground="#FF929191" />
+                            <ext:ColorPicker
+                                ColorMode="ColorCanvas"
+                                DisplayColorTooltip="False"
+                                DropDownBackground="#FF1C1C1C"
+                                DropDownBorderThickness="0"
+                                Foreground="#E0E0E0"
+                                ShowTabHeaders="False"
+                                SelectedColor="red"
+                                ShowDropDownButton="False"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Grid.Column="4"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch" />
                         </Grid>
                         <Grid
                             MouseDown="CheckBox_MouseDown"

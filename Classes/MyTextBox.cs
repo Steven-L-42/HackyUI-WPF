@@ -1,16 +1,23 @@
 ﻿using System.Diagnostics;
+using System.Globalization;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Media;
+
+
 
 namespace Project_Automait.Classes
 {
-
+    
     public class TextBox : System.Windows.Controls.TextBox
     {
+        private string passwordText = string.Empty;
 
         static TextBox()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(TextBox), new FrameworkPropertyMetadata(typeof(TextBox)));
+
         }
 
 
@@ -24,8 +31,28 @@ namespace Project_Automait.Classes
             set { SetValue(CornerRadiusProperty, value); }
         }
 
+        // ShowText Dependency Property
+        public static readonly DependencyProperty ShowTextProperty =
+             DependencyProperty.Register("ShowText", typeof(bool), typeof(TextBox), new PropertyMetadata(true));
 
-        // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
+        public bool ShowText
+        {
+            get { return (bool)GetValue(ShowTextProperty); }
+            set { SetValue(ShowTextProperty, value); }
+        }
+
+        // IsPassword Dependency Property
+        public static readonly DependencyProperty IsPasswordProperty =
+             DependencyProperty.Register("IsPassword", typeof(bool), typeof(TextBox), new PropertyMetadata(false));
+
+        public bool IsPassword
+        {
+            get { return (bool)GetValue(IsPasswordProperty); }
+            set { SetValue(IsPasswordProperty, value); }
+        }
+
+
+        // IsEmpty Dependency Property Key
         public static readonly DependencyPropertyKey IsEmptyPropertyKey =
             DependencyProperty.RegisterReadOnly("IsEmpty", typeof(bool), typeof(TextBox), new PropertyMetadata(true));
 
@@ -37,12 +64,12 @@ namespace Project_Automait.Classes
             set { SetValue(IsEmptyPropertyKey, value); }
         }
 
-        protected override void OnTextChanged(System.Windows.Controls.TextChangedEventArgs e)
+        protected override void OnTextChanged(TextChangedEventArgs e)
         {
+            Password = new string('*', Text.Length);
             IsEmpty = string.IsNullOrEmpty(Text);
 
         }
-
 
         // Placeholder Dependency Property
         public static readonly DependencyProperty PlaceholderProperty =
@@ -52,6 +79,16 @@ namespace Project_Automait.Classes
         {
             get { return (string)GetValue(PlaceholderProperty); }
             set { SetValue(PlaceholderProperty, value); }
+        }
+
+        // Password Dependency Property
+        public static readonly DependencyProperty PasswordProperty =
+            DependencyProperty.Register("Password", typeof(string), typeof(TextBox), new PropertyMetadata(string.Empty));
+
+        public string Password
+        {
+            get { return (string)GetValue(PasswordProperty); }
+            set { SetValue(PasswordProperty, value); }
         }
 
 
@@ -98,6 +135,7 @@ namespace Project_Automait.Classes
             set { SetValue(PlaceholderForegroundProperty, value); }
         }
 
+
         // Background Dependency Property
         public static readonly new DependencyProperty BackgroundProperty =
             DependencyProperty.Register("Background", typeof(Brush), typeof(TextBox), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(0xFF, 0x15, 0x15, 0x15))));
@@ -108,6 +146,7 @@ namespace Project_Automait.Classes
             set { SetValue(BackgroundProperty, value); }
         }
 
+
         // HoveredForeground Dependency Property
         public static readonly DependencyProperty HoveredForegroundProperty =
             DependencyProperty.Register("HoveredForeground", typeof(Brush), typeof(TextBox), new PropertyMetadata(new SolidColorBrush(Color.FromArgb(0xFF, 0xFF, 0x7A, 0x00))));
@@ -117,6 +156,7 @@ namespace Project_Automait.Classes
             get { return (Brush)GetValue(HoveredForegroundProperty); }
             set { SetValue(HoveredForegroundProperty, value); }
         }
+
 
         // UnCheckColor Dependency Property
         public static readonly DependencyProperty UnCheckColorProperty =
